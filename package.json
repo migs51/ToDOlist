@@ -1,0 +1,27 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "To Do List App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmejares/ToDOlist.git"
+  },
+  "author": "Miguel Mejares",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmejares/ToDOlist/issues"
+  },
+  "homepage": "https://github.com/mmejares/ToDOlist#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.21",
+    "nodemon": "^2.0.4"
+  }
+}
