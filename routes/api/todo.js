@@ -47,5 +47,15 @@ router.put('/:_id', async (req, res) => {
 
 //@route - DELETE api/todo/:_id
 //@desc  - Delete TODO
+router.delete('/:_id', async ({ params: { _id } }, res) => {
+  try {
+    await Todo.findByIdAndRemove({ _id });
+
+    res.json({ msg: 'Done!' });
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+});
 
 module.exports = router;
