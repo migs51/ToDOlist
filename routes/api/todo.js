@@ -31,9 +31,12 @@ router.get('/', async (req, res) => {
 
 //@route - PUT api/todo/:_id
 //@desc  - Update TODO
+
 router.put('/:_id', async (req, res) => {
   try {
-    let todo = await Todo.findByIdAndUpdate(req.params._id, { new: true });
+    let todo = await Todo.findByIdAndUpdate(req.params._id, req.body, {
+      new: true,
+    });
 
     return res.json(todo);
   } catch (err) {
