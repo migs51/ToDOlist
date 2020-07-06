@@ -1,26 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  Container,
+  Col,
+  Row,
+  Form,
+  Button,
+  ListGroup,
+  Card,
+} from 'react-bootstrap';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container fluid>
+      <Row>
+        <Col>
+          <div>Todo List:</div>
+        </Col>
+        <Col>
+          <Form>
+            <Form.Control placeholder='Add TODO' />
+            <Button variant='primary'>Add</Button>{' '}
+          </Form>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Card style={{ width: '18rem' }}>
+            <ListGroup variant='flush'>
+              <ListGroup.Item>Cras justo odio</ListGroup.Item>
+              <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+              <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+            </ListGroup>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
   );
-}
+};
 
 export default App;
