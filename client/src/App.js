@@ -16,10 +16,14 @@ const App = () => {
         <Col>
           <div>Todo List:</div>
         </Col>
+      </Row>
+      <Row>
         <Col>
           <Form>
             <Form.Control placeholder='Add TODO' />
-            <Button variant='primary'>Add</Button>{' '}
+            <Button className='float-right' variant='primary'>
+              Add
+            </Button>{' '}
           </Form>
         </Col>
       </Row>
